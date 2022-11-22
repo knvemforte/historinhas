@@ -51,7 +51,7 @@ public class BookController {
                 .size(100, 100)
                 .outputFormat("jpg")
                 .toFile(new File(thumbFilename.toString()));
-        Book insertedBook = bookService.insertNewBook(bookRequestDto, profileImage);
+        Book insertedBook = bookService.insertNewBook(bookRequestDto, "", profileImage);
         return BookResponseDto.convert(insertedBook);
 
     }

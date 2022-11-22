@@ -15,11 +15,13 @@ public class BookResponseDto {
     private String genre;
     private String authorName;
     private String bookImage;
+    private String docsBook;
 
     public static BookResponseDto convert(Book book){
 
         return BookResponseDto.builder()
                 .name(book.getName())
+                .docsBook(book.getDocsBook())
                 .description(book.getDescription())
                 .bookId(book.getBookId())
                 .genre(book.getGenre())
